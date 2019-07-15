@@ -1,0 +1,9 @@
+version: v1.0.0
+
+steps:
+ - build: >
+    -t binduregistry.azurecr.io/login:{{.Run.ID}}
+    -t binduregistry.azurecr.io/login:latest -f Dockerfile .
+ - cmd: docker login {{.Values.REGISTRY}}.azurecr.io -u {{.Values.REGISTRY_USER}} -p {{.Values.REGISTRY_PWD}}
+ - cmd: docker push {{.Values.REGISTRY}}.azurecr.io/login:{{.Run.ID}}
+ - cmd: docker push {{.Values.REGISTRY}}.azurecr.io/login:latest
