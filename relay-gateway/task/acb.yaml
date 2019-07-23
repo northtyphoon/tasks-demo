@@ -1,0 +1,10 @@
+versioin: v1.0.0
+
+steps:
+  - cmd: {{.Run.Registry}}/relay:app
+    disableWorkingDirectoryOverride: true
+    env:
+      - RELAY_NAMESPACE={{.Values.RELAY_NAMESPACE}}
+      - RELAY_HYBRID_CONNECTION_NAME={{.Values.RELAY_HYBRID_CONNECTION_NAME}}
+      - RELAY_SAS_KEY_NAME={{.Values.RELAY_SAS_KEY_NAME}}
+      - RELAY_SAS_KEY_VALUE={{.Values.RELAY_SAS_KEY_VALUE}}
