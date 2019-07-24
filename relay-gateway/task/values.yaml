@@ -1,0 +1,4 @@
+RELAY_NAMESPACE: bindudemo.servicebus.windows.net
+RELAY_HYBRID_CONNECTION_NAME: app
+RELAY_SAS_KEY_NAME: listener
+RELAY_SAS_KEY_VALUE: 
