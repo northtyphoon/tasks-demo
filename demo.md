@@ -91,7 +91,7 @@ az acr task timer update ^
 
 ```sh
 az acr pack build ^
-  -t my-build-pack-app:{{.Run.ID}} ^
+  -t my-build-pack-node-app:{{.Run.ID}} ^
   --pull ^
   --builder cloudfoundry/cnb:bionic ^
   .
@@ -99,10 +99,18 @@ az acr pack build ^
 
 ```sh
 az acr pack build ^
-  -t my-build-pack-app:{{.Run.ID}} ^
+  -t my-build-pack-node-app:{{.Run.ID}} ^
   --pull ^
   --builder cloudfoundry/cnb:bionic ^
   https://github.com/northtyphoon/tasks-demo.git#master:buildpack/node
+```
+
+```sh
+az acr pack build ^
+  -t my-build-pack-java-app:{{.Run.ID}} ^
+  --pull ^
+  --builder cloudfoundry/cnb:bionic ^
+  https://github.com/northtyphoon/tasks-demo.git#master:buildpack/java
 ```
 
 ## 12. Relay-Gateway
