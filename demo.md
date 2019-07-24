@@ -33,8 +33,7 @@ az acr task create ^
   -n createblobwithmi ^
   -f acb.yaml ^
   --set ContainerUri=https://bindudemo.blob.core.windows.net/demo ^
-  --assign-identity ^
-  --base-image-trigger-enabled false
+  --assign-identity
 ```
 
 ## 5. Assign the managed identity to access the storage account
