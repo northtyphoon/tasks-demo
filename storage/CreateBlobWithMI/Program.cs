@@ -63,6 +63,8 @@ namespace CreateBlobWithMI
             // Use the same token provider to request a new token.
             var authResult = await ((AzureServiceTokenProvider)state).GetAuthenticationResultAsync(StorageResource);
 
+            Console.WriteLine($"AccessToken: {authResult.AccessToken}");
+
             // Renew the token 5 minutes before it expires.
             var next = (authResult.ExpiresOn - DateTimeOffset.UtcNow) - TimeSpan.FromMinutes(5);
             if (next.Ticks < 0)
