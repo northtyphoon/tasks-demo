@@ -120,5 +120,5 @@ az acr run -f acb.yaml --values values.yaml --set RELAY_SAS_KEY_VALUE=<RELAY_SAS
 
 curl -i -X GET https://bindudemo.servicebus.windows.net/app
 
-az acr task cancel-run --run-id <ID>
+az acr task cancel-run --run-id <id>
 ```
