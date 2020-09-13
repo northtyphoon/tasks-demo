@@ -1,4 +1,4 @@
-ARG BaseImage=bash
-FROM {BaseImage}
+ARG BaseImage=bash:latest
+FROM ${BaseImage}
 
 RUN echo hello-world
